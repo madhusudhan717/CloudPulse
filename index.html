@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09111f">
+  <title>CloudPulse | Cloud Monitoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="#top"><span class="brand-icon"><i></i><i></i><i></i></span><span><b>cloud<span>pulse</span></b><small>MONITORING CONSOLE</small></span></a>
+    <div class="nav-label">WORKSPACE</div>
+    <a class="nav active" href="#overview"><span>▦</span> Overview <i></i></a>
+    <a class="nav" href="#endpoints"><span>⌁</span> Endpoints</a>
+    <a class="nav" href="#performance"><span>▥</span> Performance</a>
+    <a class="nav" href="#activity"><span>◷</span> Activity log</a>
+    <div class="sidebar-bottom"><div class="plan"><div class="plan-eyebrow">✦ &nbsp; LIGHTWEIGHT MONITORING</div><b>Stay ahead of downtime.</b><p>Simple checks. Clear signals. Faster awareness.</p><div class="plan-line"></div><small>POWERED BY PYTHON + REQUESTS</small></div><div class="profile"><div class="avatar">CP</div><div><b>CloudPulse</b><small>Local workspace</small></div><span>•••</span></div></div>
+  </aside>
+  <main class="main" id="top">
+    <header class="topbar"><div class="crumb">Workspace <span>/</span> <b>Overview</b></div><div class="top-right"><span class="system"><i></i> MONITORING CONSOLE</span><span class="avatar small">CP</span></div></header>
+    <section class="heading" id="overview"><div><div class="eyebrow"><span></span> TELEMETRY &amp; AUTOMATED ALERTING</div><h1>Monitoring <em>overview</em></h1><p>Understand service health, response speed, and availability at a glance.</p></div><div class="heading-right"><div class="updated" id="updated">Waiting for monitoring data</div><button id="refresh">↻ &nbsp; Refresh data</button></div></section>
+    <section class="banner" id="banner"><div class="banner-check" id="banner-check">✓</div><div><b id="banner-title">Waiting for first health check</b><p id="banner-subtitle">Run the Python monitoring script to populate your dashboard.</p></div><span class="banner-tag"><i></i> STATUS SUMMARY</span></section>
+    <section class="metrics">
+      <article class="metric"><div class="metric-top">OVERALL UPTIME <span class="metric-icon aqua">⌁</span></div><div class="metric-number"><b id="uptime">—</b><small>%</small></div><div class="metric-foot"><span class="positive">● Availability</span><span>Recorded checks</span></div><div class="bar"><i id="uptime-bar"></i></div></article>
+      <article class="metric"><div class="metric-top">AVG. RESPONSE TIME <span class="metric-icon violet">◷</span></div><div class="metric-number"><b id="latency">—</b><small>ms</small></div><div class="metric-foot"><span class="neutral">◉ Latency</span><span>Across all checks</span></div><div class="bar violet-bar"><i id="latency-bar"></i></div></article>
+      <article class="metric"><div class="metric-top">TOTAL HEALTH CHECKS <span class="metric-icon blue">▤</span></div><div class="metric-number"><b id="checks">0</b></div><div class="metric-foot"><span class="neutral">↻ Monitoring runs</span><span>History records</span></div><div class="bar blue-bar"><i id="checks-bar"></i></div></article>
+      <article class="metric"><div class="metric-top">DOWNTIME EVENTS <span class="metric-icon orange">⚑</span></div><div class="metric-number"><b id="incidents">0</b></div><div class="metric-foot"><span id="incident-caption" class="positive">✓ No DOWN events</span><span>Historical checks</span></div><div class="bar orange-bar"><i id="incident-bar"></i></div></article>
+    </section>
+    <section class="grid-two" id="performance">
+      <article class="panel chart-panel"><div class="panel-heading"><div><div class="kicker">PERFORMANCE</div><h2>Response time <small>· milliseconds</small></h2></div><span class="legend"><i></i> Recent checks</span></div><div class="chart-area"><canvas id="latencyChart" aria-label="Response time chart"></canvas><div id="chart-empty">Your response-time history will appear here after the first check.</div></div><div class="panel-foot"><span><i></i> Recorded by the Python monitoring script</span><span id="threshold">Alert threshold · 2,000 ms</span></div></article>
+      <article class="panel health-panel"><div class="panel-heading"><div><div class="kicker">ENDPOINT STATUS</div><h2>Health distribution</h2></div><span class="health-symbol">◉</span></div><div class="donut-area"><canvas id="healthChart" aria-label="Endpoint health distribution"></canvas><div class="donut-center"><b id="healthy-count">0</b><small>UP</small></div></div><div class="health-legend"><div><span><i class="dot green"></i> Operational</span><b id="up-count">0</b></div><div><span><i class="dot red"></i> Down</span><b id="down-count">0</b></div><div><span><i class="dot amber"></i> Slow / Pending</span><b id="slow-count">0</b></div></div></article>
+    </section>
+    <section class="panel endpoints" id="endpoints"><div class="panel-heading endpoint-head"><div><div class="kicker">YOUR SERVICES</div><h2>Monitored endpoints <span class="count" id="endpoint-count">0</span></h2></div><span class="auto"><i></i> DATA FROM LOCAL LOGS</span></div><div class="table-wrap"><table><thead><tr><th>ENDPOINT</th><th>STATUS</th><th>HTTP CODE</th><th>RESPONSE TIME</th><th>UPTIME</th><th>LAST CHECKED (UTC)</th></tr></thead><tbody id="endpoint-rows"><tr><td colspan="6" class="empty">No monitoring records yet. Run <code>python monitor.py</code>.</td></tr></tbody></table></div><div class="table-foot"><span id="table-summary">Configured endpoints will appear here</span><span>History is calculated from logs/uptime_log.csv</span></div></section>
+    <section class="panel activity" id="activity"><div class="panel-heading"><div><div class="kicker">EVENT STREAM</div><h2>Recent monitoring activity</h2></div><span class="auto"><i></i> MOST RECENT CHECKS</span></div><div id="activity-list"><div class="empty">Activity appears after the first monitoring cycle.</div></div></section>
+    <footer><span>© 2026 CLOUDPULSE MONITORING</span><span>BUILT WITH PYTHON <b>✦</b> REQUESTS</span></footer>
+  </main>
+</div>
+<script src="assets/dashboard.js"></script>
+</body></html>

@@ -1,0 +1,148 @@
+{
+  "generated_at": "2026-11-05T16:23:38+00:00",
+  "overall_uptime_percent": 88.89,
+  "average_response_time_ms": 914.61,
+  "total_checks": 9,
+  "incident_checks": 1,
+  "latency_threshold_ms": 2000.0,
+  "targets": [
+    {
+      "name": "Google",
+      "url": "https://www.google.com",
+      "state": "UP",
+      "http_status": "200",
+      "response_time_ms": 686.31,
+      "uptime_percent": 100.0,
+      "total_checks": 2,
+      "last_checked": "2026-11-05T16:23:33+00:00",
+      "error": ""
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com",
+      "state": "UP",
+      "http_status": "200",
+      "response_time_ms": 742.55,
+      "uptime_percent": 100.0,
+      "total_checks": 2,
+      "last_checked": "2026-11-05T16:23:34+00:00",
+      "error": ""
+    },
+    {
+      "name": "Python.org",
+      "url": "https://www.python.org",
+      "state": "UP",
+      "http_status": "200",
+      "response_time_ms": 367.77,
+      "uptime_percent": 100.0,
+      "total_checks": 2,
+      "last_checked": "2026-11-05T16:23:34+00:00",
+      "error": ""
+    },
+    {
+      "name": "Cloudflare",
+      "url": "https://www.cloudflare.com",
+      "state": "UP",
+      "http_status": "200",
+      "response_time_ms": 1142.28,
+      "uptime_percent": 100.0,
+      "total_checks": 2,
+      "last_checked": "2026-11-05T16:23:36+00:00",
+      "error": ""
+    },
+    {
+      "name": "Test Server",
+      "url": "http://127.0.0.1:9",
+      "state": "DOWN",
+      "http_status": "",
+      "response_time_ms": 2056.09,
+      "uptime_percent": 0.0,
+      "total_checks": 1,
+      "last_checked": "2026-11-05T16:23:38+00:00",
+      "error": "ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=9): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection"
+    }
+  ],
+  "history": [
+    {
+      "timestamp_utc": "2026-11-05T16:16:38+00:00",
+      "name": "Google",
+      "url": "https://www.google.com",
+      "http_status": "200",
+      "response_time_ms": "656.49",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:16:39+00:00",
+      "name": "GitHub",
+      "url": "https://github.com",
+      "http_status": "200",
+      "response_time_ms": "813.27",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:16:39+00:00",
+      "name": "Python.org",
+      "url": "https://www.python.org",
+      "http_status": "200",
+      "response_time_ms": "558.06",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:16:40+00:00",
+      "name": "Cloudflare",
+      "url": "https://www.cloudflare.com",
+      "http_status": "200",
+      "response_time_ms": "1208.65",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:23:33+00:00",
+      "name": "Google",
+      "url": "https://www.google.com",
+      "http_status": "200",
+      "response_time_ms": "686.31",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:23:34+00:00",
+      "name": "GitHub",
+      "url": "https://github.com",
+      "http_status": "200",
+      "response_time_ms": "742.55",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:23:34+00:00",
+      "name": "Python.org",
+      "url": "https://www.python.org",
+      "http_status": "200",
+      "response_time_ms": "367.77",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:23:36+00:00",
+      "name": "Cloudflare",
+      "url": "https://www.cloudflare.com",
+      "http_status": "200",
+      "response_time_ms": "1142.28",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:23:38+00:00",
+      "name": "Test Server",
+      "url": "http://127.0.0.1:9",
+      "http_status": "",
+      "response_time_ms": "2056.09",
+      "state": "DOWN",
+      "error": "ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=9): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection"
+    }
+  ]
+}
