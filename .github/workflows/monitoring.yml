@@ -1,60 +1,47 @@
+
 name: CloudPulse Scheduled Monitoring
 
 on:
   schedule:
     - cron: "*/5 * * * *"
+
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: cloudpulse-monitoring
-  cancel-in-progress: false
+  contents: read
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: Checkout repository
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
-      - name: Install Requests
-        run: python -m pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Run website health checks
         env:
           ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
         run: python monitor.py
 
-      - name: Save monitoring history to repository
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add logs/uptime_log.csv reports/dashboard-data.json reports/uptime_report.txt
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: update CloudPulse monitoring history [skip ci]"
-            git push
-          else
-            echo "No monitoring log changes to commit."
-          fi
-
-      - name: Upload monitoring evidence
+      - name: Upload monitoring logs and reports
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
-          name: cloudpulse-monitoring-${{ github.run_number }}
+          name: cloudpulse-monitoring-logs
           path: |
             logs/uptime_log.csv
             reports/dashboard-data.json
             reports/uptime_report.txt
           if-no-files-found: warn
-          retention-days: 30
+          retention-days: 14
