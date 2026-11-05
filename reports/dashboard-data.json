@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-05T16:23:38+00:00",
-  "overall_uptime_percent": 88.89,
-  "average_response_time_ms": 914.61,
-  "total_checks": 9,
-  "incident_checks": 1,
+  "generated_at": "2026-11-05T16:39:20+00:00",
+  "overall_uptime_percent": 85.71,
+  "average_response_time_ms": 648.17,
+  "total_checks": 14,
+  "incident_checks": 2,
   "latency_threshold_ms": 2000.0,
   "targets": [
     {
@@ -11,10 +11,10 @@
       "url": "https://www.google.com",
       "state": "UP",
       "http_status": "200",
-      "response_time_ms": 686.31,
+      "response_time_ms": 67.16,
       "uptime_percent": 100.0,
-      "total_checks": 2,
-      "last_checked": "2026-11-05T16:23:33+00:00",
+      "total_checks": 3,
+      "last_checked": "2026-11-05T16:39:19+00:00",
       "error": ""
     },
     {
@@ -22,10 +22,10 @@
       "url": "https://github.com",
       "state": "UP",
       "http_status": "200",
-      "response_time_ms": 742.55,
+      "response_time_ms": 303.88,
       "uptime_percent": 100.0,
-      "total_checks": 2,
-      "last_checked": "2026-11-05T16:23:34+00:00",
+      "total_checks": 3,
+      "last_checked": "2026-11-05T16:39:20+00:00",
       "error": ""
     },
     {
@@ -33,10 +33,10 @@
       "url": "https://www.python.org",
       "state": "UP",
       "http_status": "200",
-      "response_time_ms": 367.77,
+      "response_time_ms": 36.55,
       "uptime_percent": 100.0,
-      "total_checks": 2,
-      "last_checked": "2026-11-05T16:23:34+00:00",
+      "total_checks": 3,
+      "last_checked": "2026-11-05T16:39:20+00:00",
       "error": ""
     },
     {
@@ -44,10 +44,10 @@
       "url": "https://www.cloudflare.com",
       "state": "UP",
       "http_status": "200",
-      "response_time_ms": 1142.28,
+      "response_time_ms": 434.27,
       "uptime_percent": 100.0,
-      "total_checks": 2,
-      "last_checked": "2026-11-05T16:23:36+00:00",
+      "total_checks": 3,
+      "last_checked": "2026-11-05T16:39:20+00:00",
       "error": ""
     },
     {
@@ -55,11 +55,11 @@
       "url": "http://127.0.0.1:9",
       "state": "DOWN",
       "http_status": "",
-      "response_time_ms": 2056.09,
+      "response_time_ms": 1.03,
       "uptime_percent": 0.0,
-      "total_checks": 1,
-      "last_checked": "2026-11-05T16:23:38+00:00",
-      "error": "ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=9): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection"
+      "total_checks": 2,
+      "last_checked": "2026-11-05T16:39:20+00:00",
+      "error": "ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=9): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [Errno 111] Connection refused"
     }
   ],
   "history": [
@@ -143,6 +143,51 @@
       "response_time_ms": "2056.09",
       "state": "DOWN",
       "error": "ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=9): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection"
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:39:19+00:00",
+      "name": "Google",
+      "url": "https://www.google.com",
+      "http_status": "200",
+      "response_time_ms": "67.16",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:39:20+00:00",
+      "name": "GitHub",
+      "url": "https://github.com",
+      "http_status": "200",
+      "response_time_ms": "303.88",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:39:20+00:00",
+      "name": "Python.org",
+      "url": "https://www.python.org",
+      "http_status": "200",
+      "response_time_ms": "36.55",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:39:20+00:00",
+      "name": "Cloudflare",
+      "url": "https://www.cloudflare.com",
+      "http_status": "200",
+      "response_time_ms": "434.27",
+      "state": "UP",
+      "error": ""
+    },
+    {
+      "timestamp_utc": "2026-11-05T16:39:20+00:00",
+      "name": "Test Server",
+      "url": "http://127.0.0.1:9",
+      "http_status": "",
+      "response_time_ms": "1.03",
+      "state": "DOWN",
+      "error": "ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=9): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [Errno 111] Connection refused"
     }
   ]
 }
